@@ -1,33 +1,52 @@
+import java.util.Arrays;
 
-/**
- * Write a description of class yahtzee here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class yahtzee
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class yahtzee
-     */
-    public yahtzee()
-    {
-        // initialise instance variables
-        x = 0;
+    private Die6[] dice = {
+            new Die6(),
+            new Die6(),
+            new Die6(),
+            new Die6(),
+            new Die6(),
+        };
+    private String str1 = ""
+    private String str2 = ""
+    private int counter;
+    private int c;
+    
+    public yahtzee(){
+            
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    public void roll(){
+        for (int i = 0; i < 5; i++) {
+            dice[i].roll();
+        }
+    }
+    
+    public void roll(int dieNumber) {
+        dice[dieNumber - 1].roll();
+        return;
+    }
+    
+    public String toString() {
+        str1 = "Dice values:";
+        for(int a = 0; a < 5; a++) {
+            str1 += dice[a].getvalue() + "";
+        }
+        return str1;
+    }
+    
+    public String summarize() {
+        for (int c = 1; c <= 6; c++) {
+            counter = 0;
+            for (int b = 0; b < 5; b++) {
+                if (dice[b].getvalue() == c) {
+                    counter++;
+                }
+            }
+        }
+        return str2;
     }
 }
+ 
