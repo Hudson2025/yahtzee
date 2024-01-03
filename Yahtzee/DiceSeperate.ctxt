@@ -2,4 +2,16 @@
 comment0.target=DiceSeperate
 comment1.params=
 comment1.target=DiceSeperate()
-numComments=2
+comment2.params=numberOfDice
+comment2.target=DiceSeperate(int)
+comment3.params=
+comment3.target=void\ rollAllDice()
+comment4.params=
+comment4.target=java.util.List\ getAllDiceValues()
+comment5.params=
+comment5.target=int\ getTotalSum()
+comment6.params=
+comment6.target=void\ addDie()
+comment7.params=y
+comment7.target=int\ sampleMethod(int)
+numComments=8

@@ -38,6 +38,12 @@ public class DiceSeperate {
         return sum;
     }
     
-        
+    public void addDie() {
+        diceList.add(new Die6());
+    }
+    
+    public int sampleMethod(int y) {
+        return y;
     }
 }
+    

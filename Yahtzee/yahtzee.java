@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class yahtzee extends Die6
+public class yahtzee
 {
     private Die6[] dice = {
             new Die6(),
@@ -8,14 +8,13 @@ public class yahtzee extends Die6
             new Die6(),
             new Die6(),
             new Die6(),
-        };
+    };
     private String str1 = "";
     private String str2 = "";
     private int counter;
     private int c;
     
     public yahtzee(){
-            
     }
     
     public void roll(){
@@ -40,11 +39,12 @@ public class yahtzee extends Die6
     public String summarize() {
         for (int c = 1; c <= 6; c++) {
             counter = 0;
-            for (int b = 0; b < 5; b++) {
-                if (dice[b].getValue() == c) {
+            for (int b = 0; b < 5; b++){
+                if (dice[b].getValue() == c){
                     counter++;
                 }
             }
+            str2 += c + "-" + counter + ",";
         }
         return str2;
     }
